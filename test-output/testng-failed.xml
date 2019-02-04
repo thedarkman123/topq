@@ -5,9 +5,10 @@
     <classes>
       <class name="TestApi.PetTest">
         <methods>
+          <include name="addPetOrder"/>
           <include name="setup"/>
-          <include name="clean"/>
           <include name="addPet"/>
+          <include name="clean"/>
         </methods>
       </class> <!-- TestApi.PetTest -->
     </classes>
