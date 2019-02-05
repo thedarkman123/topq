@@ -1,25 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="4253" started-at="2019-02-05T05:53:35Z" finished-at="2019-02-05T05:53:39Z">
+  <suite name="Suite" duration-ms="5978" started-at="2019-02-05T06:15:34Z" finished-at="2019-02-05T06:15:40Z">
     <groups>
     </groups>
-    <test name="ApiTests" duration-ms="4253" started-at="2019-02-05T05:53:35Z" finished-at="2019-02-05T05:53:39Z">
-      <class name="TestApi.UserTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:TestApi.UserTest@59a6e353]" name="setup" is-config="true" duration-ms="1720" started-at="2019-02-05T05:53:35Z" finished-at="2019-02-05T05:53:37Z">
+    <test name="ApiTests" duration-ms="5978" started-at="2019-02-05T06:15:34Z" finished-at="2019-02-05T06:15:40Z">
+      <class name="TestApi.PetTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:TestApi.PetTest@71be98f5]" name="setup" is-config="true" duration-ms="1415" started-at="2019-02-05T06:15:34Z" finished-at="2019-02-05T06:15:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="addUserTest()[pri:2, instance:TestApi.UserTest@59a6e353]" name="addUserTest" duration-ms="2260" started-at="2019-02-05T05:53:37Z" finished-at="2019-02-05T05:53:39Z">
+        <test-method status="PASS" signature="addPetTest()[pri:0, instance:TestApi.PetTest@71be98f5]" name="addPetTest" duration-ms="2471" started-at="2019-02-05T06:15:36Z" finished-at="2019-02-05T06:15:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addPetTest -->
+        <test-method status="PASS" signature="cleanup()[pri:0, instance:TestApi.PetTest@71be98f5]" name="cleanup" is-config="true" duration-ms="0" started-at="2019-02-05T06:15:38Z" finished-at="2019-02-05T06:15:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanup -->
+      </class> <!-- TestApi.PetTest -->
+      <class name="TestApi.UserTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:TestApi.UserTest@17f6480]" name="setup" is-config="true" duration-ms="3" started-at="2019-02-05T06:15:39Z" finished-at="2019-02-05T06:15:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="addUserTest()[pri:2, instance:TestApi.UserTest@17f6480]" name="addUserTest" duration-ms="780" started-at="2019-02-05T06:15:39Z" finished-at="2019-02-05T06:15:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addUserTest -->
-        <test-method status="PASS" signature="cleanup()[pri:0, instance:TestApi.UserTest@59a6e353]" name="cleanup" is-config="true" duration-ms="0" started-at="2019-02-05T05:53:39Z" finished-at="2019-02-05T05:53:39Z">
+        <test-method status="PASS" signature="cleanup()[pri:0, instance:TestApi.UserTest@17f6480]" name="cleanup" is-config="true" duration-ms="1" started-at="2019-02-05T06:15:40Z" finished-at="2019-02-05T06:15:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanup -->
       </class> <!-- TestApi.UserTest -->
+      <class name="TestApi.OrderTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:TestApi.OrderTest@6fadae5d]" name="setup" is-config="true" duration-ms="3" started-at="2019-02-05T06:15:38Z" finished-at="2019-02-05T06:15:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="addPetOrderTest()[pri:1, instance:TestApi.OrderTest@6fadae5d]" name="addPetOrderTest" duration-ms="908" started-at="2019-02-05T06:15:38Z" finished-at="2019-02-05T06:15:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addPetOrderTest -->
+        <test-method status="PASS" signature="cleanup()[pri:0, instance:TestApi.OrderTest@6fadae5d]" name="cleanup" is-config="true" duration-ms="0" started-at="2019-02-05T06:15:39Z" finished-at="2019-02-05T06:15:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanup -->
+      </class> <!-- TestApi.OrderTest -->
     </test> <!-- ApiTests -->
   </suite> <!-- Suite -->
 </testng-results>

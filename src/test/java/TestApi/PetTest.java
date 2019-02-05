@@ -19,8 +19,7 @@ public class PetTest extends BaseTest {
 
 	@Test(priority=0)
 	public void addPetTest() {
-		//just for testing sake, no dynamic stuff happen
-		//can later use faker or data provider
+		ExtentManager.logStep("Endpoint to test: " + pw.getProp("baseUrl") + pw.getProp("petCreateEndpoint"));
 		Pet p = new Pet("benny").addPhotoUrl("check").addTag("mark");
 		String jsonToSend = p.toJson();
 		ExtentManager.logStep("json string to be sent: " + jsonToSend);

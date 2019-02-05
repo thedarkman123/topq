@@ -6,11 +6,9 @@
 	 <listener class-name="listeners.CustomListeners"></listener>
   </listeners>
   <test name="ApiTests">
-    <classes>
-     <!-- 
+    <classes>   
       <class name="TestApi.PetTest"/>
       <class name="TestApi.OrderTest"/>
-     -->  
       <class name="TestApi.UserTest"/>
     </classes>
   </test> <!-- Test -->

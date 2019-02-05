@@ -25,6 +25,10 @@ public class User {
 		userNames.add(userName);
 	}
 	
+	public static ArrayList<String> getCreatedUserNames() {
+		return userNames;
+	}
+	
 	public String toJson() {	
 		//create this instance json text for rest assured
 		JsonObject orderJson = new JsonObject();		

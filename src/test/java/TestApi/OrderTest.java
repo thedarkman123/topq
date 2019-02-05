@@ -14,8 +14,7 @@ import utils.ExtentManager;
 public class OrderTest extends BaseTest {
 	@Test(priority=1)
 	public void addPetOrderTest() {
-		//this endpoint not working good, when i create new order, the id always 0
-		//I SHOULD NOT CREATE IDS BY MYSELF
+		ExtentManager.logStep("Endpoint to test: " + pw.getProp("baseUrl") + pw.getProp("petCreateOrderEndpoint"));
 		Order o = new Order(1,24);
 		String jsonToSend = o.toJson();
 		ExtentManager.logStep("json string to be sent: " + jsonToSend);

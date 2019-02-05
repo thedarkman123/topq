@@ -3,12 +3,25 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
+      <class name="TestApi.OrderTest">
+        <methods>
+          <include name="setup"/>
+          <include name="addPetOrderTest"/>
+          <include name="cleanup"/>
+        </methods>
+      </class> <!-- TestApi.OrderTest -->
+      <class name="TestApi.UserTest">
+        <methods>
+          <include name="setup"/>
+          <include name="cleanup"/>
+          <include name="addUserTest"/>
+        </methods>
+      </class> <!-- TestApi.UserTest -->
       <class name="TestApi.PetTest">
         <methods>
-          <include name="addPetOrder"/>
           <include name="setup"/>
-          <include name="addPet"/>
-          <include name="clean"/>
+          <include name="cleanup"/>
+          <include name="addPetTest"/>
         </methods>
       </class> <!-- TestApi.PetTest -->
     </classes>
