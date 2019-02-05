@@ -3,31 +3,26 @@ package TestApi;
 import static org.testng.Assert.assertEquals;
 
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import Models.Order;
 import Models.Pet;
-import Models.User;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
-import io.restassured.specification.RequestSpecification;
 import utils.ExtentManager;
 
-public class PetTest extends BaseTest {
-
-	@Test(priority=0)
-	public void addPetTest() {
-		//just for testing sake, no dynamic stuff happen
-		//can later use faker or data provider
-		Pet p = new Pet("benny").addPhotoUrl("check").addTag("mark");
-		String jsonToSend = p.toJson();
+public class OrderTest extends BaseTest {
+	@Test(priority=1)
+	public void addPetOrderTest() {
+		//this endpoint not working good, when i create new order, the id always 0
+		//I SHOULD NOT CREATE IDS BY MYSELF
+		Order o = new Order(1,24);
+		String jsonToSend = o.toJson();
 		ExtentManager.logStep("json string to be sent: " + jsonToSend);
-		Response res = RestAssured.given().body(jsonToSend).post(pw.getProp("petCreateEndpoint"));
+		Response res = RestAssured.given().body(jsonToSend).post(pw.getProp("petCreateOrderEndpoint"));
 		long createdId = res.jsonPath().getLong("id");
 		ExtentManager.logStep("id to remove when clean: " + createdId);
-		Pet.addIdToRemove(createdId);
+		Order.addIdToRemove(createdId);
 		String resBody = res.then().extract().asString();	
 		ExtentManager.logStep("response json: " + resBody);
 		int statusCode = res.statusCode();
@@ -42,9 +37,4 @@ public class PetTest extends BaseTest {
 		 * this can happen in each test class individually if necesssary
 		 */
 	}
-	
-	
-	
-	
-	
 }

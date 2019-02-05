@@ -9,7 +9,7 @@ import com.google.gson.JsonObject;
 
 public class User {
 	//we are going easy here, we keep ids for later when we clean up
-	private static ArrayList<Integer> ids = new ArrayList<Integer>();
+	private static ArrayList<String> userNames = new ArrayList<String>();
 	private String userName,firstName,lastName,email,password,phone;
 	
 	public User(String userName,String firstName,String lastName,String email,String password,String phone) {
@@ -19,6 +19,10 @@ public class User {
 		this.email     = email;
 		this.password  = password;
 		this.phone     = phone;
+	}
+	
+	public static void addUsernameToRemove(String userName) {
+		userNames.add(userName);
 	}
 	
 	public String toJson() {	

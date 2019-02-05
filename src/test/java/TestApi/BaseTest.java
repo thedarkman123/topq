@@ -1,6 +1,7 @@
 package TestApi;
 
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 
 import io.restassured.RestAssured;
@@ -12,7 +13,8 @@ import utils.PropertiesWrapper;
 public class BaseTest {
 	
 	protected PropertiesWrapper pw = new PropertiesWrapper("OR");
-	@BeforeMethod
+	
+	@BeforeClass
 	public void setup() {
 		//baseTest
 		RestAssured.baseURI = pw.getProp("baseUrl");
@@ -25,6 +27,8 @@ public class BaseTest {
 				.build();
 		RestAssured.requestSpecification = requestSpecification;
 	}
+	
+	
 	
 	
 }

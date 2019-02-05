@@ -7,7 +7,7 @@ import com.google.gson.JsonObject;
 
 public class Pet {
 	//we are going easy here, we keep ids for later when we clean up
-	private static ArrayList<Integer> ids = new ArrayList<Integer>();
+	private static ArrayList<Long> ids = new ArrayList<Long>();
 	private String name,categoryName;
 	private int categoryId;
 	private ArrayList<String> photosUrlsArr = new ArrayList<String>();
@@ -15,6 +15,10 @@ public class Pet {
 	
 	public Pet(String name){
 		this.name = name;
+	}
+	
+	public static void addIdToRemove(long createdId) {
+		ids.add(createdId);
 	}
 	
 	public Pet setCategory(String name,int id){
@@ -55,24 +59,23 @@ public class Pet {
 			}
 			petJson.add("photoUrls", jsArr);
 		//tags arr
-		jsArr = new JsonArray();
+		JsonArray tagsToEnter = new JsonArray();
 		JsonObject tags;
-			if (tagsArr.size() == 0) {
-				System.out.println("here other ");
-				tags = new JsonObject();
-				tags.addProperty("id", 0);
-				tags.addProperty("name", "someDefaultTag");
-				jsArr.add(tags);
-			} else {
-				for(int i = 0; i < tagsArr.size()-1;i++){
-					System.out.println("tags " + tagsArr.get(i));
-					tags = new JsonObject();
-					tags.addProperty("id", i);
-					tags.addProperty("name", tagsArr.get(i));
-					jsArr.add(tags);
-				}
+		if (tagsArr.size() == 0) {
+			tags = new JsonObject();
+			tags.addProperty("id", 0);
+			tags.addProperty("name", "someDefaultTag");
+			tagsToEnter.add(tags);
+		} else {
+			System.out.println("WE GOT A TAG");
+			for(int i = 0; i <= tagsArr.size()-1 ;i++){
+				tags = new JsonObject();	
+				tags.addProperty("id", i);
+				tags.addProperty("name", tagsArr.get(i));
+				tagsToEnter.add(tags);
 			}
-			petJson.add("tags", jsArr);
+		}
+		petJson.add("tags", tagsToEnter);
 		return petJson.toString();
 	}
 	
