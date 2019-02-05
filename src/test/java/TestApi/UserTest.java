@@ -13,7 +13,7 @@ import io.restassured.response.Response;
 import utils.ExtentManager;
 
 public class UserTest extends BaseTest {
-	@Test(priority=2)
+	@Test
 	public void addUserTest() {
 		ExtentManager.logStep("Endpoint to test: " + pw.getProp("baseUrl") + pw.getProp("userCreateEndpoint"));
 		String userName = "thedark"; //this can be randomized (like all the other data) later if needed
@@ -30,7 +30,10 @@ public class UserTest extends BaseTest {
 	
 	@AfterClass
 	public void cleanup() {
-		System.out.println(User.getCreatedUserNames());	
+		for (String un : User.getCreatedUserNames()) {
+			System.out.println("deleting " + un + " from endpoint: " + pw.getProp("baseUrl") + pw.getProp("userCreateEndpoint") +"/" + un);
+			RestAssured.given().delete(pw.getProp("userCreateEndpoint")+"/"+un);
+		}
 	}
 	
 }

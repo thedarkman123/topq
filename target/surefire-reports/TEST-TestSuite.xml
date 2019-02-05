@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TestSuite" time="4.161" tests="3" errors="0" skipped="0" failures="0">
+<testsuite name="TestSuite" time="4.116" tests="3" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdkupdate\bin"/>
@@ -26,7 +26,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 10"/>
-    <property name="classworlds.conf" value="C:\Users\benny\eclipse-workspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf7930794334711077077.tmp"/>
+    <property name="classworlds.conf" value="C:\Users\benny\eclipse-workspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf172561087050302144.tmp"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
     <property name="java.library.path" value="C:\Program Files\Java\jdkupdate\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jdkupdate/bin/server;C:/Program Files/Java/jdkupdate/bin;C:/Program Files/Java/jdkupdate/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Microsoft MPI\Bin\;C:\ProgramData\Oracle\Java\javapath;C:\openssl-0.9.8e_X64\bin;C:\Program Files\Java\jdk1.8.0_31\bin;C:\Ruby193\bin;C:\Users\benny\AppData\Roaming\npm;C:\Program Files\nodejs;C:\Program Files\MongoDB 2.6 Standard\bin;C:\ProgramData\chocolatey\bin;C:\wamp\bin\php\php5.5.12;C:\apacheant\bin;C:\aJavasdk\bin;C:\Windows\System32;C:\Windows;C:\Program Files\TortoiseGit\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Users\benny\.dnx\bin;C:\Program Files\Microsoft DNX\Dnvm\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files (x86)\GtkSharp\2.12\bin;C:\Program Files (x86)\Heroku\bin;C:\Android;C:\Program Files\nodejs\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Users\benny\AppData\Local\Android\sdk\tools\bin;C:\Users\benny\AppData\Local\Android\sdk\tools;C:\Users\benny\AppData\Local\Android\sdk\platform-tools;C:\Program Files\Java\jdk1.8.0_191\bin;C:\apache-maven-3.6.0\bin;;C:\Program Files (x86)\Microsoft VS Code\bin;C:\Users\benny\scoop\shims;C:\Users\benny\AppData\Local\Programs\Python\Python36\Scripts\;C:\Users\benny\AppData\Local\Programs\Python\Python36\;C:\Cocos\Cocos2d-x\Cocos2d-x-3.10\templates;C:\Cocos\Cocos2d-x\Cocos2d-x-3.10\tools\cocos2d-console\bin;C:\Ruby193\bin;C:\Program Files\nodejs;C:\Program Files\MongoDB 2.6 Standard\bin;C:\ProgramData\chocolatey\bin;C:\wamp\bin\php\php5.5.12;C:\Program Files (x86)\Git\bin;C:\apacheant\bin;C:\aJavasdk\bin;&quot;C:\Program Files\Java\jdk1.8.0_77\bin&quot;;C:\Program Files (x86)\Microsoft VS Code\bin;C:\Users\benny\AppData\Local\Microsoft\WindowsApps;C:\Users\benny\AppData\Roaming\npm;;C:\Program Files\Docker Toolbox;C:\Users\benny\AppData\Local\Programs\Fiddler;C:\Program Files\eclipse;;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
@@ -60,7 +60,7 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="addPetTest" classname="TestApi.PetTest" time="2.472"/>
-  <testcase name="addPetOrderTest" classname="TestApi.OrderTest" time="0.908"/>
-  <testcase name="addUserTest" classname="TestApi.UserTest" time="0.781"/>
+  <testcase name="addPetTest" classname="TestApi.PetTest" time="2.439"/>
+  <testcase name="addUserTest" classname="TestApi.UserTest" time="0.793"/>
+  <testcase name="addPetOrderTest" classname="TestApi.OrderTest" time="0.884"/>
 </testsuite>

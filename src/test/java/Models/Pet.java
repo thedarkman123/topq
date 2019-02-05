@@ -21,6 +21,10 @@ public class Pet {
 		ids.add(createdId);
 	}
 	
+	public static ArrayList<Long> getIdsToRemove() {
+		return ids;
+	}
+	
 	public Pet setCategory(String name,int id){
 		if (id <= 0) id = 1; //we can do a lot here, not the point 
 		categoryName = name;

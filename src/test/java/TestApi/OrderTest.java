@@ -31,9 +31,11 @@ public class OrderTest extends BaseTest {
 	
 	@AfterClass
 	public void cleanup() {
-		/*
-		 * right now i clean all tests data created here,
-		 * this can happen in each test class individually if necesssary
-		 */
+		String endpointForDeletion = pw.getProp("baseUrl") + pw.getProp("petCreateOrderEndpoint") +"/";
+		for (Long orderId : Order.getIdsToRemove()) {
+			endpointForDeletion = endpointForDeletion + orderId;
+			System.out.println("deleting id " + orderId + " from endpoint: " + endpointForDeletion );
+			RestAssured.given().delete(endpointForDeletion);
+		}
 	}
 }

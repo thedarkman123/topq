@@ -1,13 +1,10 @@
 package Models;
 
-import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Locale;
-import java.util.TimeZone;
 
-import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 
 public class Order {
@@ -18,6 +15,10 @@ public class Order {
 	public Order(int petId,int quantity){
 		this.petId    = petId;
 		this.quantity = quantity;
+	}
+	
+	public static ArrayList<Long> getIdsToRemove() {
+		return ids;
 	}
 	
 	public static void addIdToRemove(long createdId) {

@@ -36,10 +36,12 @@ public class PetTest extends BaseTest {
 	
 	@AfterClass
 	public void cleanup() {
-		/*
-		 * right now i clean all tests data created here,
-		 * this can happen in each test class individually if necesssary
-		 */
+		String endpointForDeletion = pw.getProp("baseUrl") + pw.getProp("petCreateEndpoint") +"/";
+		for (Long pId : Pet.getIdsToRemove()) {
+			endpointForDeletion = endpointForDeletion + pId;
+			System.out.println("deleting id " + pId + " from endpoint: " + endpointForDeletion );
+			RestAssured.given().delete(endpointForDeletion);
+		}
 	}
 	
 	
